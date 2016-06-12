@@ -3280,7 +3280,9 @@ end</script>
         <ScriptGroup isActive="yes" isFolder="yes">
             <name>Battlerage</name>
             <packageName></packageName>
-            <script>-- BATTLERAGE</script>
+            <script>-- BATTLERAGE
+
+rageGUI = rageGUI or {}</script>
             <eventHandlerList/>
             <Script isActive="yes" isFolder="no">
                 <name>Battlerage config</name>
@@ -3293,15 +3295,16 @@ rageGUI.guibr_vars = rageGUI.guibr_vars or {}
 
 rageGUI.set_guibr_vars = function()
 
--- DO NOT EDIT ABOVE THIS LINE. Once edited, use 'ragesave' to store settings so they are used even after updates
-
 	rageGUI.guibr_vars = {
+
+-- DO NOT EDIT ABOVE THIS LINE. Once edited, use 'ragesave' to store settings so they are used even after updates
 
 		gag			= true					,-- gag Achaea RAGEMSG GAIN messages (config must be on for certain scripts to function)
 
 		fadewarn	= true					,-- give warnings 5, 3 and 1 second before rage fades, requires CONFIG RAGEMSG GAIN
-		delay		=  5					,-- number of seconds before rage fade timer displays
+		delay		= 5						,-- number of seconds before rage fade timer displays
 		showaffs	= true					,-- displays denizen aff gain / loss
+		votb		= false				,-- have artefact power to extend rage decay timer
 
 		on			= &quot;green&quot;				,-- colour of available rage
 		off			= &quot;grey&quot;				,-- colour of unavailable rage
@@ -3402,7 +3405,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;dragonsting&quot;,			27, 25,  8, &quot;dragonsting myTarget&quot;,							&quot;Aff:Sensitivity&quot;},
 		{&quot;dissolve&quot;,				 1, 17, 10, &quot;dissolve myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;override&quot;,				23, 36,  0, &quot;override myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;corrode&quot;,				23, 25,  0, &quot;corrode myTarget&quot;,									&quot;Cond Damage: clumsy/aeon&quot;},
+		{&quot;corrode&quot;,				23, 25,  0, &quot;corrode myTarget&quot;,									&quot;Cond Damage: clumsiness/aeon&quot;},
 		{&quot;dragonfear&quot;,			34, 29,  8, &quot;dragonfear myTarget&quot;,								&quot;Aff:Fear&quot;},
 	},
 	[&quot;blue dragon&quot;] = {
@@ -3410,7 +3413,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;glaciate&quot;,				33, 26,  4, &quot;glaciate myTarget&quot;,								&quot;Aff:Stun&quot;},
 		{&quot;frostrive&quot;,	 		1, 17, 10, &quot;frostrive myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;override&quot;,				23, 36,  0, &quot;override myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;frostwave&quot;,			23, 25,  0, &quot;frostwave myTarget&quot;,								&quot;Cond Damage: amnesia/reckless&quot;},
+		{&quot;frostwave&quot;,			23, 25,  0, &quot;frostwave myTarget&quot;,								&quot;Cond Damage: amnesia/recklessness&quot;},
 		{&quot;ague&quot;,					23, 14,  7, &quot;ague myTarget&quot;,										&quot;Aff:Clumsiness&quot;},
 	},
 	[&quot;gold dragon&quot;] = {
@@ -3418,7 +3421,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;deaden&quot;,				35, 24,  6, &quot;deaden myTarget&quot;,									&quot;Aff:Aeon&quot;},
 		{&quot;psishatter&quot;,			 1, 17, 10, &quot;psishatter myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;psiblast&quot;,				23, 36,  0, &quot;psiblast myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;psistorm&quot;,				23, 25,  0, &quot;psistorm myTarget&quot;,								&quot;Cond Damage: weakened/stunned&quot;},
+		{&quot;psistorm&quot;,				23, 25,  0, &quot;psistorm myTarget&quot;,								&quot;Cond Damage: weakness/stun&quot;},
 		{&quot;psidaze&quot;,				41, 28,  6, &quot;psidaze myTarget&quot;,									&quot;Aff:Amnesia&quot;},
 	},
 	[&quot;green dragon&quot;] = {
@@ -3426,7 +3429,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;scour&quot;,					25, 18,  9, &quot;scour myTarget&quot;,									&quot;Aff:Inhibit&quot;},
 		{&quot;deteriorate&quot;,			 1, 17, 10, &quot;deteriorate myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;override&quot;,				23, 36,  0, &quot;override myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;slaver&quot;,				23, 25,  0, &quot;slaver on myTarget&quot;,								&quot;Cond Damage: sensitive/clumsy&quot;},
+		{&quot;slaver&quot;,				23, 25,  0, &quot;slaver on myTarget&quot;,								&quot;Cond Damage: sensitivity/clumsiness&quot;},
 		{&quot;dragonsap&quot;, 			31, 22,  7, &quot;dragonsap myTarget&quot;,								&quot;Aff:Weakness&quot;},
 	},
 	[&quot;red dragon&quot;] = {
@@ -3434,7 +3437,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;dragontaunt&quot;,			19, 18,  8, &quot;dragontaunt myTarget&quot;,							&quot;Aff:Recklessness&quot;},
 		{&quot;melt&quot;,					 1, 17, 10, &quot;melt myTarget&quot;,										&quot;Aff:Shieldbreak&quot;},
 		{&quot;dragonblaze&quot;,			23, 36,  0, &quot;dragonblaze myTarget&quot;,							&quot;Damage over time&quot;},
-		{&quot;flamebath&quot;,			23, 25,  0, &quot;flamebath myTarget&quot;,								&quot;Cond Damage: sensitive/clumsy&quot;},
+		{&quot;flamebath&quot;,			23, 25,  0, &quot;flamebath myTarget&quot;,								&quot;Cond Damage: sensitivity/clumsiness&quot;},
 		{&quot;scorch&quot;,				25, 18,  9, &quot;scorch myTarget&quot;,									&quot;Aff:Inhibit&quot;},
 	},
 	[&quot;silver dragon&quot;] = {
@@ -3450,7 +3453,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;cadmium&quot;,				31, 22,  7, &quot;educe cadmium myTarget&quot;,							&quot;Aff:Weakness&quot;},
 		{&quot;caustic&quot;,				 1, 17, 10, &quot;throw caustic at myTarget&quot;,						&quot;Aff:Shieldbreak&quot;},
 		{&quot;magnesium&quot;,			23, 36,  0, &quot;educe magnesium myTarget&quot;,						&quot;Damage&quot;},
-		{&quot;pathogen&quot;,				23, 25,  0, &quot;throw pathogen at myTarget&quot;,					&quot;Cond damage: reckless/fear&quot;},
+		{&quot;pathogen&quot;,				23, 25,  0, &quot;throw pathogen at myTarget&quot;,					&quot;Cond damage: recklessness/fear&quot;},
 		{&quot;hypnotic&quot;,				41, 28,  4, &quot;throw hypnotic at myTarget&quot;,					&quot;Aff:Amnesia&quot;},
 	},
 	[&quot;apostate&quot;] = {
@@ -3458,7 +3461,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;horrify&quot;,				34, 29,  8, &quot;stare myTarget horrify&quot;,							&quot;Aff:Fear&quot;},
 		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;burrow&quot;,				23, 36,  0, &quot;daegger burrow myTarget&quot;,						&quot;Damage&quot;},
-		{&quot;bloodlet&quot;,				23, 25,  8, &quot;bloodlet myTarget&quot;,								&quot;Cond damage: sensitive/stunned&quot;},
+		{&quot;bloodlet&quot;,				23, 25,  8, &quot;bloodlet myTarget&quot;,								&quot;Cond damage: sensitivity/stun&quot;},
 		{&quot;possess&quot;,				43, 32,  4, &quot;possess myTarget&quot;,									&quot;Aff:Charm&quot;},
 	},
 	[&quot;bard&quot;] = {
@@ -3466,7 +3469,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;trill&quot;,					41, 28,  4, &quot;play trill at myTarget&quot;,							&quot;Aff:Amnesia&quot;},
 		{&quot;resonance&quot;,			 1, 17, 10, &quot;play resonance at myTarget&quot;,					&quot;Aff:Shieldbreak&quot;},
 		{&quot;howlslash&quot;,			23, 36,  0, &quot;howlslash myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;cyclone&quot;,				23, 25,  4, &quot;cyclone myTarget&quot;,									&quot;Cond damage: clumsy/stunned&quot;},
+		{&quot;cyclone&quot;,				23, 25,  4, &quot;cyclone myTarget&quot;,									&quot;Cond damage: clumsiness/stun&quot;},
 		{&quot;charm&quot;,					43, 32,  4, &quot;play charm at myTarget&quot;,							&quot;Aff:Charm&quot;},
 	},
 	[&quot;blademaster&quot;] = {
@@ -3474,7 +3477,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;daze&quot;,					33, 26,  4, &quot;shin daze myTarget&quot;,								&quot;Aff:Stun&quot;},
 		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;spinslash&quot;,			23, 36,  0, &quot;spinslash myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;headstrike&quot;,			23, 25,  0, &quot;strike myTarget head&quot;,							&quot;Cond damage: reckless/fear&quot;},
+		{&quot;headstrike&quot;,			23, 25,  0, &quot;strike myTarget head&quot;,							&quot;Cond damage: recklessness/fear&quot;},
 		{&quot;nerveslash&quot;,			31, 22,  7, &quot;nerveslash myTarget&quot;,								&quot;Aff:Weakness&quot;},
 	},
 	[&quot;druid&quot;] = {
@@ -3482,7 +3485,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;redeem&quot;,				31, 22,  7, &quot;reclamation redeem myTarget&quot;,					&quot;Aff:Weakness&quot;},
 		{&quot;vinecrack&quot;,			 1, 17, 10, &quot;vinecrack myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;ravage&quot;,				23, 36,  0, &quot;ravage myTarget&quot;,									&quot;Damage&quot;},
-		{&quot;sear&quot;,					23, 25,  0, &quot;sear myTarget&quot;,										&quot;Cond Damage: reckless/stunned&quot;},
+		{&quot;sear&quot;,					23, 25,  0, &quot;sear myTarget&quot;,										&quot;Cond Damage: recklessness/stun&quot;},
 		{&quot;glare&quot;,					23, 14,  4, &quot;quarterstaff glare myTarget&quot;,					&quot;Aff:Clumsiness&quot;},
 	},
 	[&quot;infernal&quot;] = {
@@ -3490,7 +3493,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;soulshield&quot;,			37, 20,  8, &quot;soulshield&quot;,										&quot;Temporary damage shield&quot;},
 		{&quot;shiver&quot;,				 1, 17, 10, &quot;shive myTarget&quot;,									&quot;Aff:Shieldbreak&quot;},
 		{&quot;spike&quot;,					23, 36,  0, &quot;spike myTarget&quot;,									&quot;Damage&quot;},
-		{&quot;hellstrike&quot;,			23, 25,  0, &quot;hellstrike myTarget&quot;,								&quot;Cond Damage: reckless/fear&quot;},
+		{&quot;hellstrike&quot;,			23, 25,  0, &quot;hellstrike myTarget&quot;,								&quot;Cond Damage: recklessness/fear&quot;},
 		{&quot;deathlink&quot;,			43, 30,  5, &quot;deathlink myAlly&quot;,									&quot;Take 50% of ally's damage&quot;},
 	},
 	[&quot;jester&quot;] = {
@@ -3506,7 +3509,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;dilation&quot;,				35, 24,  6, &quot;cast dilation at myTarget&quot;,						&quot;Aff:Aeon&quot;},
 		{&quot;disintegrate&quot;,		 1, 17, 10, &quot;cast disintegrate at myTarget&quot;,				&quot;Aff:Shieldbreak&quot;},
 		{&quot;squeeze&quot;,				23, 36,  0, &quot;golem squeeze myTarget&quot;,							&quot;Damage&quot;},
-		{&quot;firefall&quot;,				23, 25,  7, &quot;cast firefall at myTarget&quot;,						&quot;Cond Damage: clumsy/reckless&quot;},
+		{&quot;firefall&quot;,				23, 25,  7, &quot;cast firefall at myTarget&quot;,						&quot;Cond Damage: clumsiness/recklessness&quot;},
 		{&quot;stormbolt&quot;,			27, 25,  8, &quot;cast stormbolt at myTarget&quot;,					&quot;Aff:Sensitivity&quot;},
 	},
 	[&quot;monk&quot;] = {
@@ -3514,7 +3517,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;scramble&quot;,				31, 22,  7, &quot;mind scramble myTarget&quot;,							&quot;Aff:Clumsiness&quot;},
 		{&quot;splinterkick&quot;,		 1, 17, 10, &quot;spk myTarget&quot;,										&quot;Aff:Shieldbreak&quot;},
 		{&quot;tornadokick&quot;,			23, 36,  0, &quot;tnk myTarget&quot;,										&quot;Damage&quot;},
-		{&quot;mindblast&quot;,			23, 25,  0, &quot;mind blast myTarget&quot;,								&quot;Cond Damage: weakened/sensitive&quot;},
+		{&quot;mindblast&quot;,			23, 25,  0, &quot;mind blast myTarget&quot;,								&quot;Cond Damage: weakness/sensitivity&quot;},
 		{&quot;ripplestrike&quot;,		27, 25,  9, &quot;rpst myTarget&quot;,										&quot;Aff:Inhibit&quot;},
 	},
 	[&quot;occultist&quot;] = {
@@ -3530,7 +3533,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;regeneration&quot;,		53, 33,  8, &quot;perform rite of regeneration&quot;,					&quot;Regenerate health&quot;},
 		{&quot;faithrend&quot;,			 1, 17, 10, &quot;faithrend myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;shock&quot;,					23, 36,  0, &quot;perform rite of shock at myTarget&quot;,			&quot;Damage over time&quot;},
-		{&quot;punishment&quot;,			23, 25,  0, &quot;perform rite of punishment at myTarget&quot;,		&quot;Cond Damage: weakened/clumsy&quot;},
+		{&quot;punishment&quot;,			23, 25,  0, &quot;perform rite of punishment at myTarget&quot;,		&quot;Cond Damage: weakness/clumsiness&quot;},
 		{&quot;recovery&quot;,				44, 31,  6, &quot;perform rite of recovery at myAlly&quot;,			&quot;Heals ally for next 6 seconds&quot;},
 	},
 	[&quot;priest&quot;] = {
@@ -3538,7 +3541,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;incense&quot;,				18, 19, 15, &quot;angel incense myTarget&quot;,							&quot;Aff:Recklessness&quot;},
 		{&quot;crack&quot;,					 1, 17, 10, &quot;crack myTarget&quot;,									&quot;Aff:Shieldbreak&quot;},
 		{&quot;desolation&quot;,			23, 36,  4, &quot;perform rite of desolation on myTarget&quot;,		&quot;Damage over time&quot;},
-		{&quot;hammer&quot;,				23, 25,  0, &quot;hammer myTarget&quot;,									&quot;Cond Damage: clumsy/amnesia&quot;},
+		{&quot;hammer&quot;,				23, 25,  0, &quot;hammer myTarget&quot;,									&quot;Cond Damage: clumsiness/amnesia&quot;},
 		{&quot;horrify&quot;,				34, 29,  8, &quot;perform rite of horrify on myTarget&quot;,		&quot;Aff:Fear&quot;},
 	},
 	[&quot;runewarden&quot;] = {
@@ -3546,7 +3549,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;bulwark&quot;,				45, 28, 15, &quot;bulwark&quot;,											&quot;25% damage reduction for self&quot;},
 		{&quot;fragment&quot;,				 1, 17, 10, &quot;fragment myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;onslaught&quot;,			23, 36,  0, &quot;onslaught myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;etch&quot;,					23, 25,  0, &quot;etch rune at myTarget&quot;,							&quot;Cond Damage: aeon/stunned&quot;},
+		{&quot;etch&quot;,					23, 25,  0, &quot;etch rune at myTarget&quot;,							&quot;Cond Damage: aeon/stun&quot;},
 		{&quot;safeguard&quot;,			57, 35, 10, &quot;safeguard myAlly&quot;,									&quot;40% damage reduction for ally&quot;},
 	},
 	[&quot;sentinel&quot;] = {
@@ -3554,7 +3557,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;tame&quot;,					43, 32,  5, &quot;tame myTarget&quot;,										&quot;Aff:Charm&quot;},
 		{&quot;bore&quot;		,			 1, 17, 10, &quot;bore myTarget&quot;,										&quot;Aff:Shieldbreak&quot;},
 		{&quot;skewer&quot;,				23, 36,  0, &quot;skewer myTarget&quot;,									&quot;Damage&quot;},
-		{&quot;swarm&quot;,					23, 25,  0, &quot;swarm myTarget&quot;,									&quot;Cond Damage: aeon/clumsy&quot;},
+		{&quot;swarm&quot;,					23, 25,  0, &quot;swarm myTarget&quot;,									&quot;Cond Damage: aeon/clumsiness&quot;},
 		{&quot;goad&quot;,					19, 18, 15, &quot;goad myTarget&quot;,										&quot;Aff:Recklessness&quot;},
 	},
 	[&quot;serpent&quot;] = {
@@ -3562,7 +3565,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;flagellate&quot;,			27, 25,  6, &quot;flagellate myTarget&quot;,								&quot;Aff:Aeon&quot;},
 		{&quot;excoriate&quot;,			 1, 17, 10, &quot;excoriate myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
 		{&quot;throatrip&quot;,			23, 36,  0, &quot;throatrip myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;snare&quot;,					23, 25,  5, &quot;snare myTarget&quot;,									&quot;Aff:Charm&quot;},
+		{&quot;snare&quot;,					23, 25,  5, &quot;snare myTarget&quot;,									&quot;Cond Damage: inhibited/weakness&quot;},
 		{&quot;obliviate&quot;,			41, 28,  4, &quot;obliviate myTarget&quot;,								&quot;Aff:Amnesia&quot;},
 	},
 	[&quot;shaman&quot;] = {
@@ -3570,7 +3573,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;korkma&quot;,				34, 29,  4, &quot;invoke korkma myTarget&quot;,							&quot;Aff:Fear&quot;},
 		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;haemorrhage&quot;,			23, 36,  0, &quot;curse myTarget haemorrhage&quot;,					&quot;Damage&quot;},
-		{&quot;vurus&quot;,					23, 25,  0, &quot;invoke vurus myTarget&quot;,							&quot;Cond Damage: sensitive/amnesia&quot;},
+		{&quot;vurus&quot;,					23, 25,  0, &quot;invoke vurus myTarget&quot;,							&quot;Cond Damage: sensitivity/amnesia&quot;},
 		{&quot;cesaret&quot;,				19, 18, 15, &quot;invoke cesaret myTarget&quot;,						&quot;Aff:Recklessness&quot;},
 	},
 	[&quot;sylvan&quot;] = {
@@ -3578,7 +3581,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;sandstorm&quot;,			34, 29,  8, &quot;cast sandstorm at myTarget&quot;,					&quot;Aff:Fear&quot;},
 		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;stonevine&quot;,			23, 36,  0, &quot;stonevine myTarget&quot;,								&quot;Damage&quot;},
-		{&quot;leechroot&quot;,			23, 25,  0, &quot;leechroot myTarget&quot;,								&quot;Cond Damage: inhibited/weakened&quot;},
+		{&quot;leechroot&quot;,			23, 25,  0, &quot;leechroot myTarget&quot;,								&quot;Cond Damage: inhibited/weakness&quot;},
 		{&quot;rockshot&quot;,				41, 28,  4, &quot;cast rockshot at myTarget&quot;,						&quot;Aff:Amnesia&quot;},
 	},
 }
@@ -3596,9 +3599,12 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = 1.5
+rageGUI.version = 1.6
 
 rageGUI.timeout = 15
+
+-- increase timeout if character has Vambraces of the Berserker
+if rageGUI.guibr_vars.votb then rageGUI.timeout = rageGUI.timeout + 5 end
 
 
 rageGUI.myRage = function()
@@ -3756,6 +3762,8 @@ rageGUI.updateRageCaptions = function()
 	if not gmcp.Char then return end
    rageGUI.rageTable = rageGUI.tblBattleRage[gmcp.Char.Status.class:lower()]
 
+	if not rageGUI.rageTable then return end
+
 	rage1:echo(rageGUI.rageTable[1][1]:title()..&quot; (&quot;..rageGUI.rageTable[1][3]..&quot;)&quot;,&quot;white&quot;,&quot;c&quot;)
 	rage1:setClickCallback(&quot;rageGUI.rageClick&quot;,rageGUI.rageTable[1][5])
 
@@ -3793,6 +3801,8 @@ end
 
 
 rageGUI.updateRagePane = function()
+
+	if not rageGUI.rageTable then return end
 
 	local rage = rageGUI.myRage()
 	local lvl = tonumber(gmcp.Char.Status.level:match(&quot;%d+&quot;,1))
@@ -3991,6 +4001,7 @@ end
 
 
 
+
 rageGUI.set = function(arg1, arg2)
 
 	local vars = rageGUI.guibr_vars
@@ -4059,7 +4070,9 @@ end
 registerAnonymousEventHandler(&quot;gmcp.Char.Vitals&quot;,&quot;rageGUI.count&quot;)
 registerAnonymousEventHandler(&quot;gmcp.Char.Status.class&quot;,&quot;rageGUI.updateRageCaptions&quot;)
 registerAnonymousEventHandler(&quot;rageGUI fade&quot;,&quot;rageGUI.rageFadeWarn&quot;)
-</script>
+
+
+raiseEvent(&quot;rageGUI system loaded&quot;)</script>
                 <eventHandlerList/>
             </Script>
             <Script isActive="yes" isFolder="no">
@@ -4109,7 +4122,14 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
             <Script isActive="no" isFolder="no">
                 <name>Battlerage release notes</name>
                 <packageName></packageName>
-                <script>-- v1.5
+                <script>-- v1.6
+-- fixed 'gold dragon' typo to 'golden dragon'
+-- corrected serpent flagellate aff from aeon to sensitivity - thanks Rangor
+-- updated labels with more consistent names of conditional affs - thanks Rangor
+-- added new variable, votb, to support characters with Vambraces of the Berserker
+
+
+-- v1.5
 -- fixed 'ragegui' alias to toggle visibility of the GUI
 -- added in event for gmcp.Char.Status.class to update GUI
 -- removed redundant dragonform / lesserform triggers
@@ -4330,4 +4350,7 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
             </Key>
         </KeyGroup>
     </KeyPackage>
+    <HelpPackage>
+        <helpURL></helpURL>
+    </HelpPackage>
 </MudletPackage>
