@@ -1072,6 +1072,148 @@
                 </Trigger>
             </TriggerGroup>
             <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Depthswalker</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Drain (1 depthswalker)</name>
+                    <script>rageGUI.useAbility(&quot;drain&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You command the shadow of (.+) to begin siphoning away the life of its host\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Lash (2 depthswalker)</name>
+                    <script>rageGUI.useAbility(&quot;lash&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You summon whips of shadow to viciously lash the form of (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Curse (3 depthswalker)</name>
+                    <script>rageGUI.useAbility(&quot;curse&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Bending your formidable will upon (.+)t\, you slow the passage of time about (?:him|her) to a crawl\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Nakail (4 depthswalker)</name>
+                    <script>rageGUI.useAbility(&quot;nakail&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Directing your power against the magical shield surrounding (.+)\, you intone\, \'Nakail\.$</string>
+                        <string>^Directing your power against the magical shield surrounding (.+)\, you intone\, \'Nakail\'\.$</string>
+                        <string>^Directing your power against the magical shield surrounding (.+)\, you intone\, \&quot;Nakail\&quot;\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                        <integer>1</integer>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Erasure (5 depthswalker)</name>
+                    <script>rageGUI.useAbility(&quot;erasure&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You viciously eradicate parts of the concept of (.+) from the timestream\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Boinad (6 depthswalker)</name>
+                    <script>rageGUI.useAbility(&quot;boinad&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Locking your gaze to that of (.+)\, you (?:i|e)ntone\, \'Boinad\'\.$</string>
+                        <string>^Locking your gaze to that of (.+)\, you (?:i|e)entone\, \&quot;Boinad\&quot;\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                 <name>Druid</name>
                 <script></script>
                 <triggerType>0</triggerType>
@@ -3273,6 +3415,13 @@ end</script>
                 <packageName></packageName>
                 <regex>^ragegui$</regex>
             </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Display rage GUI variables</name>
+                <script>rageGUI.showVars()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^rageshow$</regex>
+            </Alias>
         </AliasGroup>
     </AliasPackage>
     <ActionPackage/>
@@ -3288,6 +3437,9 @@ rageGUI = rageGUI or {}</script>
                 <name>Battlerage config</name>
                 <packageName></packageName>
                 <script>-- BATTLERAGE CONFIG
+
+-- DO NOT EDIT THIS SCRIPT, USE 'rageshow' ALIAS to get clickable menu
+
 -- Update variables here to configure your system
 
 rageGUI = rageGUI or {}
@@ -3299,12 +3451,14 @@ rageGUI.set_guibr_vars = function()
 
 -- DO NOT EDIT ABOVE THIS LINE. Once edited, use 'ragesave' to store settings so they are used even after updates
 
+
 		gag			= true					,-- gag Achaea RAGEMSG GAIN messages (config must be on for certain scripts to function)
 
 		fadewarn	= true					,-- give warnings 5, 3 and 1 second before rage fades, requires CONFIG RAGEMSG GAIN
 		delay		= 5						,-- number of seconds before rage fade timer displays
 		showaffs	= true					,-- displays denizen aff gain / loss
 		votb		= false				,-- have artefact power to extend rage decay timer
+		fsize		= 8                ,-- font size (default is 8)
 
 		on			= &quot;green&quot;				,-- colour of available rage
 		off			= &quot;grey&quot;				,-- colour of unavailable rage
@@ -3318,11 +3472,7 @@ rageGUI.set_guibr_vars = function()
 		y			= 100					,-- distance from top of screen for rage gui
 
 										--css styling for BattleRage GUI container
-		style		= [[border-width: 2px;
-						border-color: #400020;
-						border-style: groove;
-						border-radius: 1;
-						]]
+		style		= [[border-width: 2px; border-color: #400020; border-style: groove; border-radius: 1;]]
 
 -- DO NOT EDIT BELOW THIS LINE
 	}
@@ -3475,7 +3625,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 	[&quot;blademaster&quot;] = {
 		{&quot;leapstrike&quot;,			16, 14,  0, &quot;leapstrike myTarget&quot;,								&quot;Damage&quot;},
 		{&quot;daze&quot;,					33, 26,  4, &quot;shin daze myTarget&quot;,								&quot;Aff:Stun&quot;},
-		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
+		{&quot;shin shatter&quot;,		 1, 17, 10, &quot;shin shatter myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;spinslash&quot;,			23, 36,  0, &quot;spinslash myTarget&quot;,								&quot;Damage&quot;},
 		{&quot;headstrike&quot;,			23, 25,  0, &quot;strike myTarget head&quot;,							&quot;Cond damage: recklessness/fear&quot;},
 		{&quot;nerveslash&quot;,			31, 22,  7, &quot;nerveslash myTarget&quot;,								&quot;Aff:Weakness&quot;},
@@ -3599,7 +3749,7 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = 1.6
+rageGUI.version = 1.7
 
 rageGUI.timeout = 15
 
@@ -3666,6 +3816,7 @@ rageGUI.rageTable = rageGUI.rageTable or {}
 
 rageGUI.buildRagePane = function()
 
+	local fSze = tonumber(rageGUI.guibr_vars.fsize) or 8
 	local xPos = rageGUI.guibr_vars.x
 	local yPos = rageGUI.guibr_vars.y
 	local b = 3
@@ -3690,7 +3841,7 @@ rageGUI.buildRagePane = function()
 
 	rage1 = Geyser.Label:new({
 		name = &quot;rage1&quot;,
-		fontSize = 8,
+		fontSize = fSze,
 		message = [[&lt;center&gt;Rage 1&lt;/center&gt;]],
 	}, rageVBox)
 	rage1:setStyleSheet(rageGUI.off)
@@ -3699,7 +3850,7 @@ rageGUI.buildRagePane = function()
 	rage2 = Geyser.Label:new({
 		name = &quot;rage2&quot;,
 
-		fontSize = 8,
+		fontSize = fSze,
 		message = [[&lt;center&gt;Rage 2&lt;/center&gt;]],
 	}, rageVBox)
 	rage2:setStyleSheet(rageGUI.off)
@@ -3707,7 +3858,7 @@ rageGUI.buildRagePane = function()
 
 	rage3 = Geyser.Label:new({
 		name = &quot;rage3&quot;,
-		fontSize = 8,
+		fontSize = fSze,
 		message = [[&lt;center&gt;Rage 3&lt;/center&gt;]],
 	}, rageVBox)
 	rage3:setStyleSheet(rageGUI.off)
@@ -3715,7 +3866,7 @@ rageGUI.buildRagePane = function()
 
 	rage4 = Geyser.Label:new({
 		name = &quot;rage4&quot;,
-		fontSize = 8,
+		fontSize = fSze,
 		message = [[&lt;center&gt;Rage 4&lt;/center&gt;]],
 	}, rageVBox)
 	rage4:setStyleSheet(rageGUI.off)
@@ -3723,21 +3874,21 @@ rageGUI.buildRagePane = function()
 
 	rage5 = Geyser.Label:new({
 		name = &quot;rage5&quot;,
-		fontSize = 8,
+		fontSize = fSze,
 		message = [[&lt;center&gt;Rage 5&lt;/center&gt;]],
 	}, rageVBox)
 	rage5:setStyleSheet(rageGUI.off)
 
 	rage6 = Geyser.Label:new({
 		name = &quot;rage6&quot;,
-		fontSize = 9,
+		fontSize = fSze+1,
 		message = [[&lt;center&gt;Rage 6&lt;/center&gt;]],
 	}, rageVBox)
 	rage6:setStyleSheet(rageGUI.off)
 
 	rageB = Geyser.Label:new({
 		name = &quot;rageB&quot;,
-		fontSize = 8,
+		fontSize = fSze,
 		message = [[&lt;center&gt;Rage Balance&lt;/center&gt;]],
 	}, rageVBox)
 	rageB:setStyleSheet(rageGUI.on)
@@ -3924,6 +4075,8 @@ end
 
 rageGUI.rageTimer = function(N,L,D,C)
 
+	local H = tonumber(rageGUI.guibr_vars.h)
+
 	rageBal = 0
 	raiseEvent(&quot;rageGUI rage balance&quot;,&quot;lost&quot;)
 
@@ -3938,7 +4091,7 @@ rageGUI.rageTimer = function(N,L,D,C)
 		end
 	else
 		W = tonumber(string.match(rage1.width,&quot;%d+&quot;))
-		demonnic.anitimer:new(N, {x = 0, y = 0, height = 20, width = W}, D, {container = C, showTime = true, timerCaption = L, cssFront = rageGUI.timerfg, cssBack = rageGUI.timerbg})
+		demonnic.anitimer:new(N, {x = 0, y = 0, height = H, width = W}, D, {container = C, showTime = true, timerCaption = L, cssFront = rageGUI.timerfg, cssBack = rageGUI.timerbg})
 	end
 
 end
@@ -4066,6 +4219,24 @@ rageGUI.rageFadeWarn = function(_, arg)
 end
 
 
+rageGUI.showVars = function()
+	print(&quot;Show vars&quot;)
+
+	local kstr = &quot;&quot;
+	local vstr = &quot;&quot;
+
+	for k, v in pairs(rageGUI.guibr_vars) do
+		kstr = tostring(k)
+		vstr = tostring(v)
+
+		cechoLink(&quot;&lt;pink&gt;&quot;..kstr..&quot;&lt;reset&gt;&quot;, [[printCmdLine(&quot;rageset ]]..kstr..&quot; &quot;..vstr..[[&quot;)]], &quot;rageset &quot;..kstr..&quot; &quot;..vstr, true)
+		cecho((&quot; &quot;):rep(12-kstr:len())..&quot;&lt;white&gt;: &lt;reset&gt;&quot;..vstr..&quot;\n&quot;)
+
+	end
+
+end
+
+
 
 registerAnonymousEventHandler(&quot;gmcp.Char.Vitals&quot;,&quot;rageGUI.count&quot;)
 registerAnonymousEventHandler(&quot;gmcp.Char.Status.class&quot;,&quot;rageGUI.updateRageCaptions&quot;)
@@ -4122,7 +4293,14 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
             <Script isActive="no" isFolder="no">
                 <name>Battlerage release notes</name>
                 <packageName></packageName>
-                <script>-- v1.6
+                <script>-- v1.7
+-- updated Blademaster shield breaking rage ability to shin shatter - thanks Zulah
+-- added alias 'rageshow' to display table showing rage GUI variables
+-- added clickable links to table displayed by rageshow to edit variables
+-- added Depthswalker class - thanks Ahmet
+
+
+-- v1.6
 -- fixed 'gold dragon' typo to 'golden dragon'
 -- corrected serpent flagellate aff from aeon to sensitivity - thanks Rangor
 -- updated labels with more consistent names of conditional affs - thanks Rangor
