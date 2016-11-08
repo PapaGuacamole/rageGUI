@@ -2205,8 +2205,8 @@
                 <regexCodeList/>
                 <regexCodePropertyList/>
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                    <name>Desolation (1 priest)</name>
-                    <script>rageGUI.useAbility(&quot;desolation&quot;)</script>
+                    <name>Torment (1 priest)</name>
+                    <script>rageGUI.useAbility(&quot;torment&quot;)</script>
                     <triggerType>0</triggerType>
                     <conditonLineDelta>0</conditonLineDelta>
                     <mStayOpen>0</mStayOpen>
@@ -2265,8 +2265,8 @@
                     </regexCodePropertyList>
                 </Trigger>
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                    <name>Harrow (4 priest)</name>
-                    <script>rageGUI.useAbility(&quot;harrow&quot;)</script>
+                    <name>Desolation (4 priest)</name>
+                    <script>rageGUI.useAbility(&quot;desolation&quot;)</script>
                     <triggerType>0</triggerType>
                     <conditonLineDelta>0</conditonLineDelta>
                     <mStayOpen>0</mStayOpen>
@@ -3440,7 +3440,6 @@ rageGUI = rageGUI or {}</script>
 
 -- v1.7 onwards, DO NOT EDIT THIS SCRIPT. Use 'rageshow' and 'rageset' aliases instead
 
--- Update variables here to configure your system
 
 rageGUI = rageGUI or {}
 rageGUI.guibr_vars = rageGUI.guibr_vars or {}
@@ -3448,8 +3447,6 @@ rageGUI.guibr_vars = rageGUI.guibr_vars or {}
 rageGUI.set_guibr_vars = function()
 
 	rageGUI.guibr_vars = {
-
--- DO NOT EDIT ABOVE THIS LINE. Once edited, use 'ragesave' to store settings so they are used even after updates
 
 		gag			= true					,-- gag Achaea RAGEMSG GAIN messages (config must be on for certain scripts to function)
 
@@ -3469,10 +3466,9 @@ rageGUI.set_guibr_vars = function()
 		x			= 100					,-- distance from left of screen for rage gui
 		y			= 100					,-- distance from top of screen for rage gui
 
-										--css styling for BattleRage GUI container
+											 --css styling for BattleRage GUI container
 		style		= [[border-width: 2px; border-color: #400020; border-style: groove; border-radius: 1; ]]
 
--- DO NOT EDIT BELOW THIS LINE
 	}
 
 end
@@ -3564,7 +3560,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;frostwave&quot;,			23, 25,  0, &quot;frostwave myTarget&quot;,								&quot;Cond Damage: amnesia/recklessness&quot;},
 		{&quot;ague&quot;,					23, 14,  7, &quot;ague myTarget&quot;,										&quot;Aff:Clumsiness&quot;},
 	},
-	[&quot;gold dragon&quot;] = {
+	[&quot;golden dragon&quot;] = {
 		{&quot;overwhelm&quot;,			16, 14,  0, &quot;overwhelm myTarget&quot;,								&quot;Damage&quot;},
 		{&quot;deaden&quot;,				35, 24,  6, &quot;deaden myTarget&quot;,									&quot;Aff:Aeon&quot;},
 		{&quot;psishatter&quot;,			 1, 17, 10, &quot;psishatter myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
@@ -3633,7 +3629,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;lash&quot;,					23, 36,  0, &quot;shadow lash myTarget&quot;,							&quot;Damage&quot;},
 		{&quot;curse&quot;,					35, 24,  6, &quot;chrono curse myTarget&quot;,							&quot;Aff:Aeon&quot;},
 		{&quot;nakail&quot;,				 1, 17, 10, &quot;intone nakail myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
-		{&quot;erasure&quot;,				23, 25,  0, &quot;chrono erasure myTarget&quot;,						&quot;Damage&quot;},
+		{&quot;erasure&quot;,				23, 25,  0, &quot;chrono erasure myTarget&quot;,						&quot;Cond damage: amnesia/weakness&quot;},
 		{&quot;boinad&quot;,				38, 32,  5, &quot;intone boinad myTarget&quot;,							&quot;Aff:Charm&quot;},
 	},
 	[&quot;druid&quot;] = {
@@ -3755,7 +3751,7 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = 1.7
+rageGUI.version = &quot;1.7.1&quot;
 
 rageGUI.timeout = 15
 
@@ -4297,126 +4293,135 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
             <Script isActive="no" isFolder="no">
                 <name>Battlerage release notes</name>
                 <packageName></packageName>
-                <script>-- v1.7
--- added Depthswalker class - thanks Ahmet
--- added 'rageshow' alias to display rageGUI variables
--- added 'rageset' alias to allow updating of variables without directly editing scripts
--- added clickable links to rageshow output to write to command line
--- updated Blademaster shield breaking rage ability to shin shatter - thanks Zulah
+                <script>-- RAGEGUI RELEASE NOTES
+
+--[[
+
+	v1.7.1
+		updated Chrono Erasure (depthswalker 4) to reflect synergy with amenesia and recklessness - thanks Tydas
+		fixed typo 'gold dragon' to 'golden dragon' - thanks Aegoth
+		fixed issues with priest level 1 and 4 abilities - thanks Drual
+		tidied up Release Notes
+
+	v1.7
+		added Depthswalker class - thanks Ahmet
+		added 'rageshow' alias to display rageGUI variables
+		added 'rageset' alias to allow updating of variables without directly editing scripts
+		added clickable links to rageshow output to write to command line
+		updated Blademaster shield breaking rage ability to shin shatter - thanks Zulah
 
 
--- v1.6
--- fixed 'gold dragon' typo to 'golden dragon'
--- corrected serpent flagellate aff from aeon to sensitivity - thanks Rangor
--- updated labels with more consistent names of conditional affs - thanks Rangor
--- added new variable, votb, to support characters with Vambraces of the Berserker
+	v1.6
+		fixed 'gold dragon' typo to 'golden dragon'
+		corrected serpent flagellate aff from aeon to sensitivity - thanks Rangor
+		updated labels with more consistent names of conditional affs - thanks Rangor
+		added new variable, votb, to support characters with Vambraces of the Berserker
 
 
--- v1.5
--- fixed 'ragegui' alias to toggle visibility of the GUI
--- added in event for gmcp.Char.Status.class to update GUI
--- removed redundant dragonform / lesserform triggers
--- fixed table to use class for dragons
--- corrected typo in Ensconce (Jester level 4 ability) - thanks Ezran
--- added animated timer to show rage fading - suggested by Azuros
--- added new variable rageGUI.guibr_vars to delay start of fade animated timer (defaults to 5 seconds)
--- added event 'rageGUI fade' to timeout warnings
--- fixed issue with settings not correctly saving / loading
+	v1.5
+		fixed 'ragegui' alias to toggle visibility of the GUI
+		added in event for gmcp.Char.Status.class to update GUI
+		removed redundant dragonform / lesserform triggers
+		fixed table to use class for dragons
+		corrected typo in Ensconce (Jester level 4 ability) - thanks Ezran
+		added animated timer to show rage fading - suggested by Azuros
+		added new variable rageGUI.guibr_vars to delay start of fade animated timer (defaults to 5 seconds)
+		added event 'rageGUI fade' to timeout warnings
+		fixed issue with settings not correctly saving / loading
 
 
--- v1.4
--- update to fix errors brought about by dragon colour in GMCP
--- added alias 'ragegui' to toggle visibility of the GUI - bugged
+	v1.4
+		update to fix errors brought about by dragon colour in GMCP
+		added alias 'ragegui' to toggle visibility of the GUI - bugged
 
 
--- v1.3
--- fixed order of Runewarden abilities - thanks Kyrra and Ziri
--- created new function, useAbility, to go off ability name or position in table - thanks Volge
--- added triggers and info for excoriate and obliviate - thanks Dairon and Rangor
+	v1.3
+		fixed order of Runewarden abilities - thanks Kyrra and Ziri
+		created new function, useAbility, to go off ability name or position in table - thanks Volge
+		added triggers and info for excoriate and obliviate - thanks Dairon and Rangor
 
 
--- v1.2
--- added horrify and crack (priest) lines - thanks Silas
--- added sentinel lines - thanks Praxides
+	v1.2
+		added horrify and crack (priest) lines - thanks Silas
+		added sentinel lines - thanks Praxides
 
 
--- v1.1
--- recklessness duration increased to 15 seconds
--- battlerage fade increased to 15 seconds
--- various typo and bug-fixes
+	v1.1
+		recklessness duration increased to 15 seconds
+		battlerage fade increased to 15 seconds
+		various typo and bug-fixes
 
 
--- v1.0
--- added occultist lines - thanks Seragorn
--- added jester lines - thanks Leliel
--- added blademaster lines - thanks Cronos and Praxides
--- added level check for when buttons light up
--- updated codebase to account for new third level ability for all classes
--- added shieldbreak trigger lines for all dragon colours, alchemist, bard, druid, infernal, magi and runewarden
+	v1.0
+		added occultist lines - thanks Seragorn
+		added jester lines - thanks Leliel
+		added blademaster lines - thanks Cronos and Praxides
+		added level check for when buttons light up
+		updated codebase to account for new third level ability for all classes
+		added shieldbreak trigger lines for all dragon colours, alchemist, bard, druid, infernal, magi and runewarden
 
 
--- v0.9.1
--- added check for getMudletVersion() to ensure on Mudlet 3+
-
-
-
--- v0.9
--- added extra line for Stormflare (silver dragon) - thanks Kard
--- added Svo prompt tag rageGUIrage
--- added trigger for Sear (druid) with recklessness - thanks Kei
--- tooltips now visible when hovering over battlerage abilities
--- tooltips rewritten
--- renamed rageGUI.rageEcho() to rageGUI.echoN()
--- added rageGUI.echo() for in-line echoes
--- added rageGUI.set() to update variables
--- added rageset alias
--- rewrote rageGUI.rageKey() to call rageGUI.rageClick()
+	v0.9.1
+		added check for getMudletVersion() to ensure on Mudlet 3+
 
 
 
--- v0.8.1
--- moved rageGUI.rageEcho() to earlier in script block to fix error with loading
+	v0.9
+		added extra line for Stormflare (silver dragon) - thanks Kard
+		added Svo prompt tag rageGUIrage
+		added trigger for Sear (druid) with recklessness - thanks Kei
+		tooltips now visible when hovering over battlerage abilities
+		tooltips rewritten
+		renamed rageGUI.rageEcho() to rageGUI.echoN()
+		added rageGUI.echo() for in-line echoes
+		added rageGUI.set() to update variables
+		added rageset alias
+		rewrote rageGUI.rageKey() to call rageGUI.rageClick()
 
 
--- v0.8
--- implemented gmcp event handler for Rage value changes - rageGUI rage balance
--- current rage count displayed on rage balance indicator
--- repurposed Rage change trigger to only affect decay timers
--- fixed typo in Corrupt (shaman) trigger
--- updated setClickCallback to prevent error spam
--- updated antimer detection routine
--- moved most functions and variables into rageGUI namespace
--- events renamed to include rageGUI at the beginning, eg 'denizen lost aff' becomes 'rageGUI denizen lost aff'
--- updated typo in name of Stormbolt (magi) trigger
--- added cost in rage to ability indicator / buttons
--- added confirmation echo to rageGUI.save_guibr_vars()
+	v0.8.1
+		moved rageGUI.rageEcho() to earlier in script block to fix error with loading
 
 
--- v0.7
--- Fixed issue with [Rage] lines not being gagged
--- Added option to suppress denizen aff gain / loss - guibr_vars.showaffs
--- Added warnings 6, 3 and 1 second before rage fades, can be disabled using guibr_vars.fadewarn
--- Added variable to supress rage fade warnings (new option in guibr_vars table)
--- Added trigger for gold dragon aeon fading
--- Added Rage Balance indicator in BattleRage window, using events to update
--- Updated denizen affliction timings based on HELP BATTLERAGE
--- Fixed typo in Glaciate (blue dragon) trigger
--- Added triggers for fading black dragon afflictions
--- Added triggers for fading blue dragon afflictions
--- Added triggers for fading red dragon afflictions
+	v0.8
+		implemented gmcp event handler for Rage value changes - rageGUI rage balance
+		current rage count displayed on rage balance indicator
+		repurposed Rage change trigger to only affect decay timers
+		fixed typo in Corrupt (shaman) trigger
+		updated setClickCallback to prevent error spam
+		updated antimer detection routine
+		moved most functions and variables into rageGUI namespace
+		events renamed to include rageGUI at the beginning, eg 'denizen lost aff' becomes 'rageGUI denizen lost aff'
+		updated typo in name of Stormbolt (magi) trigger
+		added cost in rage to ability indicator / buttons
+		added confirmation echo to rageGUI.save_guibr_vars()
 
 
--- v0.6
--- Added sensitivity line to Mindblast (monk) trigger
--- Added rageversion alias to display version
--- Fixed lua error when trying to use abilities with no clientside &quot;target&quot; variable
--- Fixed issue with Apple OS adding numbers to exported settings file
+	v0.7
+		Fixed issue with [Rage] lines not being gagged
+		Added option to suppress denizen aff gain / loss - guibr_vars.showaffs
+		Added warnings 6, 3 and 1 second before rage fades, can be disabled using guibr_vars.fadewarn
+		Added variable to supress rage fade warnings (new option in guibr_vars table)
+		Added trigger for gold dragon aeon fading
+		Added Rage Balance indicator in BattleRage window, using events to update
+		Updated denizen affliction timings based on HELP BATTLERAGE
+		Fixed typo in Glaciate (blue dragon) trigger	
+		Added triggers for fading black dragon afflictions
+		Added triggers for fading blue dragon afflictions
+		Added triggers for fading red dragon afflictions
 
 
--- v0.5
--- Added shaman lines (thanks Mosr)
--- Added rage1 to rage5 aliases to use battlerage abilities
--- fixed animated timers reference, will now use demonnic.anitimer, aliased to anitimer
+	v0.6
+		Added sensitivity line to Mindblast (monk) trigger
+		Added rageversion alias to display version
+		Fixed lua error when trying to use abilities with no clientside &quot;target&quot; variable
+		Fixed issue with Apple OS adding numbers to exported settings file
+
+
+	v0.5
+		Added shaman lines (thanks Mosr)
+		Added rage1 to rage5 aliases to use battlerage abilities
+		fixed animated timers reference, will now use demonnic.anitimer, aliased to anitimer
 
 
 -- v0.4
@@ -4470,7 +4475,9 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
 -- Monk
 -- Paladin
 -- Priest
--- Runewarden</script>
+Runewarden
+
+]]--</script>
                 <eventHandlerList/>
             </Script>
         </ScriptGroup>
