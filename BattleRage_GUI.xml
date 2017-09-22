@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE MudletPackage>
-<MudletPackage version="1.0">
+<MudletPackage version="1.001">
     <TriggerPackage>
         <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
             <name>Battlerage</name>
@@ -994,8 +994,8 @@
                         <integer>1</integer>
                     </regexCodePropertyList>
                 </Trigger>
-                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                    <name>Unknown (3 blademaster)</name>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Shin shatter (3 blademaster)</name>
                     <script>rageGUI.useAbility(&quot;3&quot;)</script>
                     <triggerType>0</triggerType>
                     <conditonLineDelta>0</conditonLineDelta>
@@ -1007,8 +1007,12 @@
                     <mSoundFile></mSoundFile>
                     <colorTriggerFgColor>#000000</colorTriggerFgColor>
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                    <regexCodeList/>
-                    <regexCodePropertyList/>
+                    <regexCodeList>
+                        <string>^You unleash a burst of Shin energy at .+\, tearing apart (?:his|her|its) translucent shield\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
                 </Trigger>
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>Spinslash (4 blademaster)</name>
@@ -3619,7 +3623,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 	[&quot;blademaster&quot;] = {
 		{&quot;leapstrike&quot;,			16, 14,  0, &quot;leapstrike myTarget&quot;,								&quot;Damage&quot;},
 		{&quot;daze&quot;,					33, 26,  4, &quot;shin daze myTarget&quot;,								&quot;Aff:Stun&quot;},
-		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
+		{&quot;shatter&quot;,				 1, 17, 10, &quot;shin shatter myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;spinslash&quot;,			23, 36,  0, &quot;spinslash myTarget&quot;,								&quot;Damage&quot;},
 		{&quot;headstrike&quot;,			23, 25,  0, &quot;strike myTarget head&quot;,							&quot;Cond damage: recklessness/fear&quot;},
 		{&quot;nerveslash&quot;,			31, 22,  7, &quot;nerveslash myTarget&quot;,								&quot;Aff:Weakness&quot;},
@@ -3823,7 +3827,7 @@ rageGUI.buildRagePane = function()
 	local b = 3
 
 	if GuiContainer then xPos = tonumber(string.match(GuiContainer.x,&quot;%d+&quot;))-rageGUI.guibr_vars.w end
-	if defPane then yPos = tonumber(string.match(defPane.height,&quot;%d+&quot;))+tonumber(string.match(defPane.y,&quot;%d+&quot;)) end
+	if pane_tradeskills then yPos = tonumber(string.match(pane_tradeskills.height,&quot;%d+&quot;))+tonumber(string.match(pane_tradeskills.y,&quot;%d+&quot;)) end
 
 	ragePane = Geyser.Label:new({
 		name = &quot;ragePane&quot;,
@@ -4296,6 +4300,9 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
                 <script>-- RAGEGUI RELEASE NOTES
 
 --[[
+
+	v1.7.2
+		added trigger and info for Shin Shatter (blademaster 3) - thanks Thalak
 
 	v1.7.1
 		updated Chrono Erasure (depthswalker 4) to reflect synergy with amenesia and recklessness - thanks Tydas
