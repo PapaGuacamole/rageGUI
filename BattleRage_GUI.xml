@@ -692,7 +692,7 @@
                     <colorTriggerFgColor>#000000</colorTriggerFgColor>
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
                     <regexCodeList>
-                        <string>^You quickly mix together several chemical by\-products and fling the toxic mixture into (.+)\t's face\, causing (him|her) to cough and choke\.$</string>
+                        <string>^You quickly mix together several chemical by\-products and fling the toxic mixture into (.+)\t\'s face\, causing (him|her) to cough and choke\.$</string>
                     </regexCodeList>
                     <regexCodePropertyList>
                         <integer>1</integer>
@@ -3755,7 +3755,7 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = &quot;1.7.1&quot;
+rageGUI.version = &quot;1.7.3&quot;
 
 rageGUI.timeout = 15
 
@@ -3909,14 +3909,16 @@ rageGUI.buildRagePane = function()
 end
 
 
-rageGUI.updateRageCaptions = function()
+rageGUI.updateRageCaptions = function(cls)
 
+	if not cls then cls = gmcp.Char.Status.class:lower() end
+	
 	for k, v in pairs(rageGUI.guibr_vars) do
 		if v == &quot;false&quot; then rageGUI.guibr_vars[k] = false end
 	end
 
 	if not gmcp.Char then return end
-   rageGUI.rageTable = rageGUI.tblBattleRage[gmcp.Char.Status.class:lower()]
+   rageGUI.rageTable = rageGUI.tblBattleRage[cls]
 
 	if not rageGUI.rageTable then return end
 
@@ -4300,6 +4302,9 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
                 <script>-- RAGEGUI RELEASE NOTES
 
 --[[
+
+	v1.7.3
+		fixed typo in miasma trigger for Alchemist - thanks Shub
 
 	v1.7.2
 		added trigger and info for Shin Shatter (blademaster 3) - thanks Thalak
