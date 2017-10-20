@@ -753,8 +753,10 @@
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
                     <regexCodeList>
                         <string>^You sketch out the symbol for magnesium and direct the energy of iron to sear (.+)\'s flesh\.$</string>
+                        <string>^You sketch out the symbol for magnesium and direct the energy to sear (.+)\'s flesh\.$</string>
                     </regexCodeList>
                     <regexCodePropertyList>
+                        <integer>1</integer>
                         <integer>1</integer>
                     </regexCodePropertyList>
                 </Trigger>
@@ -4303,6 +4305,9 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
 
 --[[
 
+	v1.7.4
+		added alternate line in magnesium trigger for Alchemist - thanks Shub (again!)
+		
 	v1.7.3
 		fixed typo in miasma trigger for Alchemist - thanks Shub
 
