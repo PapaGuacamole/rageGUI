@@ -3348,6 +3348,482 @@ if rage1.message:find(&quot;Rage&quot;) then rageGUI.updateRageCaptions() end</s
                     <integer>1</integer>
                 </regexCodePropertyList>
             </Trigger>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Elemental Lord</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="yes" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Become earth elemental lord</name>
+                    <script>rageGUI.updateRageCaptions(&quot;earth elemental lord&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>As the earth rises to clad your growing form</string>
+                        <string>As the earth rises to clad your growing form in a skin of stone, you scream out in triumph, the very blood of Earth surging through your granite veins. By the will of Garash, Earth is yours to command!</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>2</integer>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="yes" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Become fire elemental lord</name>
+                    <script>rageGUI.updateRageCaptions(&quot;firew elemental lord&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>With a victorious roar, you bellow your triumph into the firmament.</string>
+                        <string>With a victorious roar, you bellow your triumph into the firmament. A pillar of flame erupts at your feet and surges forth, searing the ground at your feet. From beneath a vermilion veil, you gaze out upon the world, and all seems as fuel before you. By the will of Kkractle, Fire is yours to command!</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>2</integer>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Air</name>
+                    <script></script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList/>
+                    <regexCodePropertyList/>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Bolt (1 air elemental)</name>
+                        <script>rageGUI.useAbility(&quot;bolt&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You call down a lightning bolt to destroy .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Suffocate (2 air elemental)</name>
+                        <script>rageGUI.useAbility(&quot;suffocate&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You rip the breath from .+\, depriving h(?:im|er) of air for severalseconds and leaving h(?:im|er) gasping and weak\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Drill (3 air elemental)</name>
+                        <script>rageGUI.useAbility(&quot;drill&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You form a localised twister\, spinning it at incredible speed to form a drill that plunges straight through the magical shield surrounding .+\, utterly destroying it\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Pressurewave (4 air elemental)</name>
+                        <script>rageGUI.useAbility(&quot;pressurewave&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You send a crushing wave of pressurised air at .+\, pulverising h(?:im|er)\.</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Compress (5 air elemental)</name>
+                        <script>rageGUI.useAbility(&quot;compress&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You raise the pressure surrounding .+ to terrible heights\, but (?:|s)he manages to struggle free of your intangible grasp\.$</string>
+                            <string>^You raise the pressure surrounding the already vulnerable form of .+ to terrible heights\, crushing the life from h(?:im|er)\.</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Vacuum (6 air elemental)</name>
+                        <script>rageGUI.useAbility(&quot;vacuum&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You bring a vacuum into being with .+ at the centre\, denying h(?:im|er)any chance at breathing\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                </TriggerGroup>
+                <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Earth</name>
+                    <script></script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList/>
+                    <regexCodePropertyList/>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Smash (1 earth elemental)</name>
+                        <script>rageGUI.useAbility(&quot;smash&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You bring one of your stone fists down upon .+ in a smashing blow\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Rockfall (2 earth elemental)</name>
+                        <script>rageGUI.useAbility(&quot;rockfall&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You manifest rocks directly above .+\, burying h(?:im|er) under a cascading hammer of stone\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Charge (3 earth elemental)</name>
+                        <script>rageGUI.useAbility(&quot;charge&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^Wreathing yourself in magma\, you charge into .+\, smashing through the magical shield that surrounds h(?:im|er) with the might of your stone\-forged form.\$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Flurry (4 earth elemental)</name>
+                        <script>rageGUI.useAbility(&quot;flurry&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^Imbuing your form with the might of earth\, you launch a terrible assault upon .+\, raining blow after blow down upon h(?:im|er) with your empowered fists\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Magmaburst (5 earth elemental)</name>
+                        <script>rageGUI.useAbility(&quot;magmaburst&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You call up a column of magma to strike down .+\, but (?:|s)he steps back away from the danger\.$</string>
+                            <string>^You call up a column of magma\, sending it crashing over the helpless form of .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Rampart (6 earth elemental)</name>
+                        <script>rageGUI.useAbility(&quot;rampart&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You move to stand before \w+ ready to protect h(?:im|er) from harm\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                </TriggerGroup>
+                <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Fire</name>
+                    <script></script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList/>
+                    <regexCodePropertyList/>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Engulf (1 fire elemental)</name>
+                        <script>rageGUI.useAbility(&quot;engulf&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^Summoning forth the primal fires\, you engulf .+ in flames\!$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Scourge (2 fire elemental)</name>
+                        <script>rageGUI.useAbility(&quot;scourge&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You scourge .+ with a whip of flame\, leaving h(?:im|er) sensitive and raw\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Wires (3 fire elemental)</name>
+                        <script>rageGUI.useAbility(&quot;wires&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^Raising a hand\, you send forth thin wires of flame\, their searing filaments tearing through the magical shield surrounding .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Devastation (4 fire elemental)</name>
+                        <script>rageGUI.useAbility(&quot;devastation&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You call forth a raging firestorm to destroy .+\, its insatiable fury falling upon h(?:im|er) with ravenous intent\.$</string>
+                            <string>^You unleash a raging cataclysm of destruction\, the area directly surrounding .+ becoming nothing but fire and ash\.</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Cataclysm (5 fire elemental)</name>
+                        <script>rageGUI.useAbility(&quot;cataclysm&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You prepare to unleash a cataclysm against .+\, but (?:|s)he anticipates your intent and moves out of your target area\.$</string>
+                            <string>^You unleash a raging cataclysm of destruction\, the area directly surrounding .+ becoming nothing but fire and ash\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Bonds (6 fire elemental)</name>
+                        <script>rageGUI.useAbility(&quot;bonds&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You manifest a net of flame and cast it about the form of .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                </TriggerGroup>
+            </TriggerGroup>
         </TriggerGroup>
     </TriggerPackage>
     <TimerPackage/>
@@ -3426,7 +3902,7 @@ end</script>
                 <script>rageGUI.showVars()</script>
                 <command></command>
                 <packageName></packageName>
-                <regex>^rageshow()</regex>
+                <regex>^rage(?:|show)$</regex>
             </Alias>
         </AliasGroup>
     </AliasPackage>
@@ -3473,8 +3949,9 @@ rageGUI.set_guibr_vars = function()
 		y			= 100					,-- distance from top of screen for rage gui
 
 											 --css styling for BattleRage GUI container
-		style		= [[border-width: 2px; border-color: #400020; border-style: groove; border-radius: 1; ]]
+		style		= [[border-width: 2px; border-color: #400020; border-style: groove; border-radius: 1; ]],
 
+		element	= &quot;none&quot;,	-- required for elemental lord
 	}
 
 end
@@ -3597,6 +4074,33 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 		{&quot;dragonspark&quot;,			23, 36,  0, &quot;dragonspark myTarget&quot;,							&quot;Damage&quot;},
 		{&quot;stormflare&quot;,			23, 25,  0, &quot;stormflare myTarget&quot;,								&quot;Cond Damage: fear/amnesia&quot;},
 		{&quot;galvanize&quot;,			19, 18, 15, &quot;galvanize myTarget&quot;,								&quot;Aff:Recklessness&quot;},
+	},
+	[&quot;air elemental lord&quot;] = {
+		{&quot;bolt&quot;,			16, 14,  0, &quot;manifest bolt myTarget&quot;,							&quot;Damage&quot;},
+		{&quot;suffocate&quot;,		31, 22,  8, &quot;aero suffocate myTarget&quot;,							&quot;Aff:Weakness&quot;},
+		{&quot;drill&quot;,			 1, 17, 10, &quot;manifest drill myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
+		{&quot;pressurewave&quot;,	23, 36,  0, &quot;manifest pressurewave myTarget&quot;,					&quot;Damage&quot;},
+		{&quot;compress&quot;,		23, 25,  0, &quot;aero compress myTarget&quot;,						&quot;Cond Damage: sensitivity/stun&quot;},
+		{&quot;vacuum&quot;,			19, 18, 15, &quot;manifest vacuum myTarget&quot;,							&quot;Aff:Inhibit&quot;},	
+	},
+	[&quot;earth elemental lord&quot;] = {
+		{&quot;smash&quot;,			16, 14,  0, &quot;terran smash myTarget&quot;,									&quot;Damage&quot;},
+		{&quot;rockfall&quot;,		33, 26,  8, &quot;manifest rockfall myTarget&quot;,						&quot;Aff:Stun&quot;},
+		{&quot;charge&quot;,			 1, 17, 10, &quot;terran charge myTarget&quot;,								&quot;Aff:Shieldbreak&quot;},
+		{&quot;flurry&quot;,			23, 36,  0, &quot;terran flurry myTarget&quot;,								&quot;Damage&quot;},
+		{&quot;magmaburst&quot;,		23, 25,  0, &quot;manifest magmaburst myTarget&quot;,				&quot;Cond Damage: recklessness/clumsiness&quot;},
+		{&quot;rampart&quot;,			19, 18, 15, &quot;terran rampart myAlly&quot;,								&quot;Take 50% of ally's damage&quot;},	
+	},
+	[&quot;fire elemental lord&quot;] = {
+		{&quot;engulf&quot;,			16, 14,  0, &quot;manifest engulf myTarget&quot;,							&quot;Damage&quot;},
+		{&quot;scourge&quot;,			27, 25,  8, &quot;manifest scourge myTarget&quot;,						&quot;Aff:Stun&quot;},
+		{&quot;wires&quot;,			 1, 17, 10, &quot;manifest wires myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
+		{&quot;devastation&quot;,		23, 36,  0, &quot;manifest devastation myTarget&quot;,					&quot;Damage&quot;},
+		{&quot;cataclysm&quot;,		23, 25,  0, &quot;manifest cataclysm myTarget&quot;,						&quot;Cond Damage: recklessness/stun&quot;},
+		{&quot;searingbonds&quot;,	42, 30, 15, &quot;manifest bonds myTarget&quot;,							&quot;Damage over time&quot;},	
+	},
+	[&quot;water elemental lord&quot;] = {
+	
 	},
 	[&quot;alchemist&quot;] = {
 		{&quot;miasma&quot;,				16, 14,  0, &quot;throw miasma at myTarget&quot;,						&quot;Damage&quot;},
@@ -3757,7 +4261,7 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = &quot;1.7.3&quot;
+rageGUI.version = &quot;1.8&quot;
 
 rageGUI.timeout = 15
 
@@ -3914,6 +4418,8 @@ end
 rageGUI.updateRageCaptions = function(cls)
 
 	if not cls then cls = gmcp.Char.Status.class:lower() end
+	
+	cls:gsub(&quot;lady&quot;, &quot;lord&quot;) --female elemental lords are ladies
 	
 	for k, v in pairs(rageGUI.guibr_vars) do
 		if v == &quot;false&quot; then rageGUI.guibr_vars[k] = false end
@@ -4234,12 +4740,14 @@ rageGUI.showVars = function()
 	local cstr = &quot;&quot;
 
 	for k, v in pairs (rageGUI.guibr_vars) do
-		kstr = tostring(k)
-		vstr = tostring(v)
-		cstr = &quot;rageset &quot;..kstr..&quot; &quot;..vstr
+		if not (k == &quot;element&quot;) then
+			kstr = tostring(k)
+			vstr = tostring(v)
+			cstr = &quot;rageset &quot;..kstr..&quot; &quot;..vstr
 
-		cechoLink(&quot;&lt;pink&gt;&quot;..kstr..&quot;&lt;reset&gt;&quot;,[[printCmdLine(&quot;]]..cstr..[[&quot;)]],cstr,true)
-		cecho((&quot; &quot;):rep(12-kstr:len())..&quot;&lt;white&gt;:&lt;reset&gt; &quot;..vstr..&quot;\n&quot;)
+			cechoLink(&quot;&lt;pink&gt;&quot;..kstr..&quot;&lt;reset&gt;&quot;,[[printCmdLine(&quot;]]..cstr..[[&quot;)]],cstr,true)
+			cecho((&quot; &quot;):rep(12-kstr:len())..&quot;&lt;white&gt;:&lt;reset&gt; &quot;..vstr..&quot;\n&quot;)
+		end
 
 	end
 
@@ -4305,6 +4813,11 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
 
 --[[
 
+	v1.8
+		added support for air, earth and fire elemental lords
+		-- thanks to Mathilda for earth
+		-- thanks to Minifie for fire
+		
 	v1.7.4
 		added alternate line in magnesium trigger for Alchemist - thanks Shub (again!)
 		
