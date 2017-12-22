@@ -3456,7 +3456,7 @@ if rage1.message:find(&quot;Rage&quot;) then rageGUI.updateRageCaptions() end</s
                         <colorTriggerFgColor>#000000</colorTriggerFgColor>
                         <colorTriggerBgColor>#000000</colorTriggerBgColor>
                         <regexCodeList>
-                            <string>^You rip the breath from .+\, depriving h(?:im|er) of air for severalseconds and leaving h(?:im|er) gasping and weak\.$</string>
+                            <string>^You rip the breath from .+\, depriving h(?:im|er) of air for several seconds and leaving h(?:im|er) gasping and weak\.$</string>
                         </regexCodeList>
                         <regexCodePropertyList>
                             <integer>1</integer>
@@ -3538,7 +3538,7 @@ if rage1.message:find(&quot;Rage&quot;) then rageGUI.updateRageCaptions() end</s
                         <colorTriggerFgColor>#000000</colorTriggerFgColor>
                         <colorTriggerBgColor>#000000</colorTriggerBgColor>
                         <regexCodeList>
-                            <string>^You bring a vacuum into being with .+ at the centre\, denying h(?:im|er)any chance at breathing\.$</string>
+                            <string>^You bring a vacuum into being with .+ at the centre\, denying h(?:im|er) any chance at breathing\.$</string>
                         </regexCodeList>
                         <regexCodePropertyList>
                             <integer>1</integer>
