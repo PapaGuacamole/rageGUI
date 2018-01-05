@@ -3804,7 +3804,7 @@ if rage1.message:find(&quot;Rage&quot;) then rageGUI.updateRageCaptions() end</s
                     </Trigger>
                     <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                         <name>Bonds (6 fire elemental)</name>
-                        <script>rageGUI.useAbility(&quot;bonds&quot;)</script>
+                        <script>rageGUI.useAbility(&quot;searingbonds&quot;)</script>
                         <triggerType>0</triggerType>
                         <conditonLineDelta>0</conditonLineDelta>
                         <mStayOpen>0</mStayOpen>
@@ -3817,6 +3817,142 @@ if rage1.message:find(&quot;Rage&quot;) then rageGUI.updateRageCaptions() end</s
                         <colorTriggerBgColor>#000000</colorTriggerBgColor>
                         <regexCodeList>
                             <string>^You manifest a net of flame and cast it about the form of .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                </TriggerGroup>
+                <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Water</name>
+                    <script></script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList/>
+                    <regexCodePropertyList/>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Icicles (1 water elemental)</name>
+                        <script>rageGUI.useAbility(&quot;icicles&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You manifest icicles from the vapour surrounding you\, casting them in a deadly volley at .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Dehydrate (2 water elemental)</name>
+                        <script>rageGUI.useAbility(&quot;dehydrate&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You dehydrate the moisture from .+\, leaving h(?:im|er) swaying and unsteady\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Aquahammer (3 water elemental)</name>
+                        <script>rageGUI.useAbility(&quot;aquahammer&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You form a giant hammer out of water and bring it crashing down upon the magical shield surrounding .+\, destroying it\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Needlerain (4 water elemental)</name>
+                        <script>rageGUI.useAbility(&quot;needlerain&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You call down a rain of needle\-sharp spears of ice\, sending them plunging into the body of .+\.$</string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Waterfall (5 water elemental)</name>
+                        <script>rageGUI.useAbility(&quot;waterfall&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You bring down a deluge upon a goblin guard\, but (?:|s)he leaps back out of the range\, suffering little more than a faceful of icy spray\.$ </string>
+                        </regexCodeList>
+                        <regexCodePropertyList>
+                            <integer>1</integer>
+                        </regexCodePropertyList>
+                    </Trigger>
+                    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                        <name>Swell (6 water elemental)</name>
+                        <script>rageGUI.useAbility(&quot;swell&quot;)</script>
+                        <triggerType>0</triggerType>
+                        <conditonLineDelta>0</conditonLineDelta>
+                        <mStayOpen>0</mStayOpen>
+                        <mCommand></mCommand>
+                        <packageName></packageName>
+                        <mFgColor>#ff0000</mFgColor>
+                        <mBgColor>#ffff00</mBgColor>
+                        <mSoundFile></mSoundFile>
+                        <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                        <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                        <regexCodeList>
+                            <string>^You begin to draw the fluid from .+\, h(?:is|er) vitality draining even as your form becomes greater\.$</string>
                         </regexCodeList>
                         <regexCodePropertyList>
                             <integer>1</integer>
@@ -4093,14 +4229,19 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 	},
 	[&quot;fire elemental lord&quot;] = {
 		{&quot;engulf&quot;,			16, 14,  0, &quot;manifest engulf myTarget&quot;,							&quot;Damage&quot;},
-		{&quot;scourge&quot;,			27, 25,  8, &quot;manifest scourge myTarget&quot;,						&quot;Aff:Stun&quot;},
+		{&quot;scourge&quot;,			27, 25,  8, &quot;manifest scourge myTarget&quot;,						&quot;Aff:Sensitivity&quot;},
 		{&quot;wires&quot;,			 1, 17, 10, &quot;manifest wires myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;devastation&quot;,		23, 36,  0, &quot;manifest devastation myTarget&quot;,					&quot;Damage&quot;},
 		{&quot;cataclysm&quot;,		23, 25,  0, &quot;manifest cataclysm myTarget&quot;,						&quot;Cond Damage: recklessness/stun&quot;},
 		{&quot;searingbonds&quot;,	42, 30, 15, &quot;manifest bonds myTarget&quot;,							&quot;Damage over time&quot;},	
 	},
 	[&quot;water elemental lord&quot;] = {
-	
+		{&quot;icicles&quot;,			16, 14,  0, &quot;manifest icicles myTarget&quot;,							&quot;Damage&quot;},
+		{&quot;dehydrate&quot;,		23, 14,  8, &quot;manifest dehydrate myTarget&quot;,							&quot;Aff:Clumsiness&quot;},
+		{&quot;aquahammer&quot;,		 1, 17, 10, &quot;manifest aquahammer myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
+		{&quot;needlerain&quot;,		23, 36,  0, &quot;manifest needlerain myTarget&quot;,							&quot;Damage&quot;},
+		{&quot;waterfall&quot;,		23, 25,  0, &quot;manifest waterfall myTarget&quot;,							&quot;Cond Damage: weakness/aeon&quot;},
+		{&quot;swell&quot;,			19, 18, 15, &quot;manifest swell myTarget&quot;,								&quot;Aff:healthleech&quot;}	
 	},
 	[&quot;alchemist&quot;] = {
 		{&quot;miasma&quot;,				16, 14,  0, &quot;throw miasma at myTarget&quot;,						&quot;Damage&quot;},
@@ -4261,7 +4402,7 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = &quot;1.8&quot;
+rageGUI.version = &quot;1.8.1&quot;
 
 rageGUI.timeout = 15
 
@@ -4419,7 +4560,7 @@ rageGUI.updateRageCaptions = function(cls)
 
 	if not cls then cls = gmcp.Char.Status.class:lower() end
 	
-	cls:gsub(&quot;lady&quot;, &quot;lord&quot;) --female elemental lords are ladies
+	cls = tostring(cls:gsub(&quot;lady&quot;, &quot;lord&quot;)) --female elemental lords are ladies
 	
 	for k, v in pairs(rageGUI.guibr_vars) do
 		if v == &quot;false&quot; then rageGUI.guibr_vars[k] = false end
@@ -4812,6 +4953,11 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
                 <script>-- RAGEGUI RELEASE NOTES
 
 --[[
+
+	v1.8.1
+		fixed Scourge (Fire Elemental Lord 2) to be sensitivity, not stun - thanks Jack
+		fixed issue where female Elemental Lords (Elemental Ladies) were not correctly capturing
+		added most of Water Elemental Lord, still missing level 5 ability with affs - thanks Shirszae and Veldrin
 
 	v1.8
 		added support for air, earth and fire elemental lords
