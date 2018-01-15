@@ -4382,7 +4382,7 @@ rageGUI.tblBattleRage = {	-- name, coodown, cost, duration, command, tooltip
 	[&quot;sylvan&quot;] = {
 		{&quot;torrent&quot;,				16, 14,  0, &quot;cast torrent at myTarget&quot;,						&quot;Damage&quot;},
 		{&quot;sandstorm&quot;,			34, 29,  8, &quot;cast sandstorm at myTarget&quot;,					&quot;Aff:Fear&quot;},
-		{&quot;shieldbreak&quot;,			 1, 17, 10, &quot;shieldbreak myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
+		{&quot;pierce&quot;,			 1, 17, 10, &quot;pierce myTarget&quot;,							&quot;Aff:Shieldbreak&quot;},
 		{&quot;stonevine&quot;,			23, 36,  0, &quot;stonevine myTarget&quot;,								&quot;Damage&quot;},
 		{&quot;leechroot&quot;,			23, 25,  0, &quot;leechroot myTarget&quot;,								&quot;Cond Damage: inhibited/weakness&quot;},
 		{&quot;rockshot&quot;,				41, 28,  4, &quot;cast rockshot at myTarget&quot;,						&quot;Aff:Amnesia&quot;},
@@ -4402,7 +4402,7 @@ rageGUI.lvls = { 6, 10, 20, 35, 50, 65 }
 
 rageGUI = rageGUI or {}
 
-rageGUI.version = &quot;1.8.1&quot;
+rageGUI.version = &quot;1.8.2&quot;
 
 rageGUI.timeout = 15
 
@@ -4954,6 +4954,9 @@ registerAnonymousEventHandler(&quot;rageGUI rage balance&quot;,&quot;rageGUI.rag
 
 --[[
 
+	v1.8.2
+		fixed Pierce (Sylvan 3) to display correctly and use correct command - Thanks Jack
+		
 	v1.8.1
 		fixed Scourge (Fire Elemental Lord 2) to be sensitivity, not stun - thanks Jack
 		fixed issue where female Elemental Lords (Elemental Ladies) were not correctly capturing
