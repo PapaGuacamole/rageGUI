@@ -3962,7 +3962,22 @@ if rage1.message:find(&quot;Rage&quot;) then rageGUI.updateRageCaptions() end</s
             </TriggerGroup>
         </TriggerGroup>
     </TriggerPackage>
-    <TimerPackage/>
+    <TimerPackage>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Battlerage</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:00.000</time>
+            <Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>10 millisecond</name>
+                <script>rageGUI.tick()</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:00.010</time>
+            </Timer>
+        </TimerGroup>
+    </TimerPackage>
     <AliasPackage>
         <AliasGroup isActive="yes" isFolder="yes">
             <name>Battlerage</name>
@@ -4406,6 +4421,8 @@ rageGUI.version = &quot;1.8.2&quot;
 
 rageGUI.timeout = 15
 
+local debugMode = true
+
 -- increase timeout if character has Vambraces of the Berserker
 if rageGUI.guibr_vars.votb then rageGUI.timeout = rageGUI.timeout + 5 end
 
@@ -4558,9 +4575,23 @@ end
 
 rageGUI.updateRageCaptions = function(cls)
 
-	if not cls then cls = gmcp.Char.Status.class:lower() end
-	
+	if not cls then
+		if not gmcp then
+			if debugMode then rage.echo(&quot;DEBUG: No GMCP, cannot update rage captions&quot;) end
+			return
+		end
+		
+		if not gmcp.Char then
+			if debug.Mode then rage.echo(&quot;DEBUG: No gmcp.Char, cannot update rage captions&quot;) end
+			return
+		end
+		
+		cls = gmcp.Char.Status.class:lower()
+	end
+
 	cls = tostring(cls:gsub(&quot;lady&quot;, &quot;lord&quot;)) --female elemental lords are ladies
+
+	if debugMode then rageGUI.echo(&quot;DEBUG: Running rageGUI.updateRageCaptions with class \&quot;&quot;..cls..&quot;\&quot;&quot;) end
 	
 	for k, v in pairs(rageGUI.guibr_vars) do
 		if v == &quot;false&quot; then rageGUI.guibr_vars[k] = false end
@@ -4763,7 +4794,6 @@ end
 
 
 rageGUI.rageFadeTimers = function()
-
 	if rageGUI.timers.fade1 then killTimer(rageGUI.timers.fade1) rageGUI.timers.fade1 = nil end
 	if rageGUI.timers.fade2 then killTimer(rageGUI.timers.fade2) rageGUI.timers.fade2 = nil end
 	if rageGUI.timers.fade3 then killTimer(rageGUI.timers.fade3) rageGUI.timers.fade3 = nil end
@@ -4864,15 +4894,19 @@ end
 
 
 rageGUI.rageFadeWarn = function(_, arg)
-
-	if arg &gt;= 1 then
-		rageGUI.echoN(rageGUI.myRage()..&quot; rage fading in &quot;..math.round(arg)..&quot; seconds&quot;)
-	else
-		rageGUI.echoN(rageGUI.myRage()..&quot; rage fading imminently!&quot;)
-	end
-
+  
+    if arg &gt;= 1 then
+        rageGUI.echoN(rageGUI.myRage()..&quot; rage fading in &quot;..math.floor(arg)..&quot; seconds&quot;)
+    else
+        rageGUI.echoN(rageGUI.myRage()..&quot; rage fading imminently!&quot;)
+    end
+ 
 end
 
+
+rageGUI.tick = function()
+
+end
 
 rageGUI.showVars = function()
 	
@@ -4895,12 +4929,20 @@ rageGUI.showVars = function()
 end
 
 
-registerAnonymousEventHandler(&quot;gmcp.Char.Vitals&quot;,&quot;rageGUI.count&quot;)
-registerAnonymousEventHandler(&quot;gmcp.Char.Status.class&quot;,&quot;rageGUI.updateRageCaptions&quot;)
-registerAnonymousEventHandler(&quot;rageGUI fade&quot;,&quot;rageGUI.rageFadeWarn&quot;)
+rageGUI.runOnce = function()
+	if not rageGUI.alreadyRun then
+		rageGUI.alreadyRun = true
+		registerAnonymousEventHandler(&quot;gmcp.Char.Vitals&quot;,&quot;rageGUI.count&quot;)
+		registerAnonymousEventHandler(&quot;gmcp.Char.Status.class&quot;,&quot;rageGUI.updateRageCaptions&quot;)
+		registerAnonymousEventHandler(&quot;rageGUI fade&quot;,&quot;rageGUI.rageFadeWarn&quot;)
+		registerAnonymousEventHandler(&quot;rageGUI system loaded&quot;,&quot;rageGUI.buildRagePane&quot;)
+		if debugMode then rageGUI.echo(&quot;DEBUG: Event handlers created&quot;) end
+	end
+end
 
 
-raiseEvent(&quot;rageGUI system loaded&quot;)</script>
+raiseEvent(&quot;rageGUI system loaded&quot;)
+rageGUI.runOnce()</script>
                 <eventHandlerList/>
             </Script>
             <Script isActive="yes" isFolder="no">
